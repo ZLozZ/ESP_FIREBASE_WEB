@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LOO</title>
+    <link rel="shortcut icon" type="image/ipg" href="img/logo.jpg"/>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <h1><b>LOO</b></h1>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+</head>
+<body>
+    <script type="module" src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <div class="dashboard">
+        <div class="siderbar">
+            <div class="sidebar-content">
+                <div class="logo"><i class="ri-plant-line=">
+                        <img src="logo.jpg" width="50px" height="50px">
+                    </i></div>
+                <div class="sidebar-items">
+                    <a href="sleep.html" class="sidebar-item">
+                        <i class="ri-home-5-line"></i>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="ri-hotel-bed-line"></i>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="ri-line-chart-line"></i>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="ri-bug-line"></i>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="ri-customer-service-line"></i>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="ri-money-dollar-circle-line"></i>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <i class="ri-settings-3-line"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="logout-btn">
+                <i class="ri-logout-box-r-line"></i>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="top-bar">
+                <div class="greeting">
+                    <h1>PHÒNG KHÁCH</h1>
+                </div>
+                <div class="top-btns">
+                    <div class="top-btn">
+                        <i class="ri-notification-line"></i>
+                    </div>
+                    <div class="top-btn">
+                        <i class="ri-user-line"></i>
+                    </div>
+                    <div class="top-btn profile">
+                        <img class="img1" src="Loo.jpg" alt=""></i>
+                    </div>
+                </div>
+            </div>
+            <div class="inner-containers">
+                <div class="inner-container-1">
+                    <div class="card-1">
+                        <div class="card-1-imgBx">
+                            <img src="dimmer.png" width="50px" height="50px">
+                        </div>
+                        <h2 class="count">Đèn 1</h2>
+                        <label class="btn">
+                                <div class = "toggle-btn" id ="unact">
+                                    <div class = "inner-circle"></div>
+                                </div>
+                                <div class = "toggle-btn active" id ="act">
+                                    <div class = inner-circle></div>
+                                </div>
+                        </label>
+                    </div>
+                    <div class="card-1">
+                        <div class="card-1-imgBx">
+                            <img src="propeller.png" width="50px" height="50px">
+                        </div>
+                        <h2 class="count">Quạt</h2>
+                        <label class="btn">
+                            <div class= "toggle-btn1" id="unact1">
+                                <div class= "inner-circle">
+                    
+                                </div>
+                            </div>
+                            <div class= "toggle-btn1 active" id="act1" >
+                                <div class= "inner-circle">
+                    
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="card-1">
+                        <div class="card-1-imgBx">
+                            <lord-icon src="https://cdn.lordicon.com/mdbykuhq.json" trigger="loop" style="width:80px;height:80px"></lord-icon>
+                        </div>
+                        <h2 class="count">Đồng hồ</h2>
+                        <h3 class = "clock">00:00:00</h3>
+                    </div>
+                    <div class="card-1">
+                        <div class="card-1-imgBx">
+                            <img src="dimmer.png" width="50px" height="50px">
+                        </div>
+                        <h2 class="count">Đèn 2</h2>
+                        <label class="btn">
+                            <div class= "toggle-btn2" id="unact2">
+                                <div class= "inner-circle">
+                    
+                                </div>
+                            </div>
+                            <div class= "toggle-btn2 active" id="act2" >
+                                <div class= "inner-circle">
+                    
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="card-1">
+                        <div class="card-1-imgBx">
+                            <lord-icon src="https://cdn.lordicon.com/rorqcmmn.json" trigger="loop" style="width:70px;height:70px"></lord-icon>
+                        </div>
+                        <h2 class="count">Nhiệt độ</h2>
+                        <h3 class = "temp"><span id = "temp"></span><span>&degC</span></h3>
+                    </div>
+                    <div class="card-1">
+                        <div class="card-1-imgBx">
+                            <lord-icon src="https://cdn.lordicon.com/dmibloap.json" trigger="loop" style="width:70px;height:70px"></lord-icon>
+                        </div>
+                        <h2 class="count">Độ ẩm</h2>
+                        <h3 class = "hum"><span id = "hum"></span><span>g/m<sup>3</sup></span></h3>
+                    </div>
+                </div>
+                <div class="inner-container-2">
+                    <div class="card-2">
+                        <h3>Thank you for using our website</h3>
+                    </div>
+                    <!-- <div class="charts">
+                    </div> -->
+                    <div class="chart" id="doughtnut-chart">
+                        <h2>Chất lượng không khí</h2>
+                        <canvas id="myChart1"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</body>
+
+</html>
